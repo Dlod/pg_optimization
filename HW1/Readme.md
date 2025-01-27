@@ -4,8 +4,7 @@ cpu 4
 ram 8Gb  
 disk 50Gb  
 ```
- PostgreSQL 17.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-2), 64-bit
-
+PostgreSQL 17.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-2), 64-bit
 pgbench (PostgreSQL) 17.2
 ```
 ## Инициализируем тестовую базу данных
