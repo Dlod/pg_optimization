@@ -45,14 +45,14 @@ statement latencies in milliseconds and failures:
          3.470           0  END;
 ```
 ## Измененяем настройки работы с памятью
-shared_buffers = 3GB
-work_mem = 24MB
-effective_cache_size = 6GB
-maintenance_work_mem = 400MB
-effective_io_concurrency = 100
-random_page_cost = 1.1
-commit_delay = 0
-wal_buffers = 64MB
+shared_buffers = 3GB  
+work_mem = 24MB  
+effective_cache_size = 6GB  
+maintenance_work_mem = 400MB  
+effective_io_concurrency = 100  
+random_page_cost = 1.1  
+commit_delay = 0  
+wal_buffers = 64MB  
 
 ```
 [postgres@MiWiFi-RC06-srv ~]$ pgbench -r -c 10 -j 2 -t 10000 test_db
@@ -84,10 +84,10 @@ statement latencies in milliseconds and failures:
          2.518           0  END;
 ```
 ## Изменяем настройки работы с ЦПУ
-max_worker_processes = 4
-max_parallel_workers_per_gather = 2
-max_parallel_maintenance_workers = 2
-max_parallel_workers = 4
+max_worker_processes = 4  
+max_parallel_workers_per_gather = 2  
+max_parallel_maintenance_workers = 2  
+max_parallel_workers = 4  
 ```
 [postgres@MiWiFi-RC06-srv ~]$ pgbench -r -c 10 -j 2 -t 10000 test_db
 pgbench (17.2)
