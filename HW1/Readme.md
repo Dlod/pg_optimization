@@ -122,11 +122,10 @@ statement latencies in milliseconds and failures:
 
 
 ## Дальнейшие правки несут за собой возможную потерю данных в случае краха сервера
+fsync = off  
+synchronous_commit = off  
+full_page_writes = off  
 ```
-fsync = off
-synchronous_commit = off
-full_page_writes = off
-
 [postgres@MiWiFi-RC06-srv ~]$ pgbench -r -c 10 -j 2 -t 10000 test_db
 pgbench (17.2)
 starting vacuum...end.
