@@ -193,7 +193,24 @@ latency average = 378.518 ms
 initial connection time = 2260.695 ms
 tps = 2641.885703 (without initial connection time)
 ```
-
+### haproxy + pgcat
+```
+# pgbench -c 1000 -j 4 -T 60 -f ~/workload.sql -U thai_user -h 192.168.31.191 -p 8432 -d thai -n
+Password:
+pgbench (17.2)
+transaction type: /root/workload.sql
+scaling factor: 1
+query mode: simple
+number of clients: 1000
+number of threads: 4
+maximum number of tries: 1
+duration: 60 s
+number of transactions actually processed: 180050
+number of failed transactions: 0 (0.000%)
+latency average = 322.782 ms
+initial connection time = 2415.379 ms
+tps = 3098.067365 (without initial connection time)
+```
 
 ## Результаты и выводы
 ### postgresql
@@ -206,4 +223,4 @@ tps = 2641.885703 (without initial connection time)
 
 По результатам тестов видно что pgcat выдает большее количество tps и меньшее время задержки с меньшим временем инициации конектов. Но так как проект ведет активную разработку много открытых issues которые мешают в работе и перед внедрением в продуктовой среде требуется более глубокое тестирование.
 
-Тесты результатов haproxy не приведены так как она работет на tcp уровне и не создает больших задержек.
+
